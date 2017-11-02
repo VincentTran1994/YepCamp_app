@@ -1,0 +1,25 @@
+<% include partials/header.ejs%>
+<div class = "container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>This CampGround Page</h1>
+            <p>This is the campground we found in all around the world</p>
+            <p >
+                <a class="btn btn-lg btn-primary" href="https://firsttry-trancongvuit.c9users.io/campgrounds/addCamp">Add new campground</a>
+            </p>
+        </div>
+    </header>
+    
+    <div class="row text-center" style="display:flex;flex-wrap:wrap;">
+        <% campground.forEach(function(cam){%>
+            <div class="col-md-4 col-sm-6">
+                <div class="thumbnail">
+                    <h4><%=cam.name%></h4> 
+                    <img style="width : 400px; height: 300px;" src = "<%= cam.image%>"></img>
+                </div>
+            </div>
+        <% });%>
+    </div>
+</div>
+
+<% include partials/footer.ejs%>
